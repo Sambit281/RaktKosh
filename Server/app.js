@@ -26,7 +26,7 @@ app.use(bodyParser.json());
 connectDB();
 
 // Routes
-app.use('/punching-machine-api', allRoutes);
+app.use('/raktkosh-api', allRoutes);
 
 // Error handling middleware
 app.use(errorHandler);
