@@ -182,17 +182,17 @@ exports.getAllUsers = async (req, res) => {
 exports.getUserByID = async (req, res) => {
     try {
         const id = req.params.id; // Extract the ID from req.params
-        const employee = await Employee.findById(id); // Use findById instead of findOne
-        if (!employee) {
+        const user = await User.findById(id); // Use findById instead of findOne
+        if (!user) {
             return res.status(404).json({
                 success: false,
-                message: "Employee data not found"
+                message: "User data not found"
             });
         }
         return res.status(200).json({
             success: true,
-            data: employee,
-            message: "Employee data retrieved successfully"
+            data: User,
+            message: "User data retrieved successfully"
         });
     } catch (error) {
         console.log(error);
