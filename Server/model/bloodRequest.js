@@ -32,6 +32,14 @@ const bloodRequestSchema = new mongoose.Schema(
             type: Number,
             required: true,
         },
+        reason: {
+            type: String,
+            required: true,
+        },
+        time: {
+            type: String,
+            required: true,
+        },
         address: {
             type: String,
             required: true,
@@ -46,11 +54,6 @@ const bloodRequestSchema = new mongoose.Schema(
         },
         reqPersonAddhar: {
             type: String,
-        },
-        formType: {
-            type: String,
-            enum: ["bloodDonation", "bloodRequest"],
-            required: true,
         },
         submittedBy: {
             type: Schema.Types.ObjectId,
